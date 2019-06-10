@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="501.0" prefWidth="401.0" spacing="50.0" style="-fx-background-color: #f4c816; -fx-background-radius: 100;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Otopark.VehicleEnterExitController">
+   <children>
+      <Label text="Vehicle Exit">
+         <font>
+            <Font name="Gill Sans MT" size="24.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="plateTextField" maxWidth="170.0" promptText="Plate" />
+      <JFXTimePicker fx:id="timePicker" promptText="Time">
+         <VBox.margin>
+            <Insets left="35.0" />
+         </VBox.margin>
+      </JFXTimePicker>
+      <JFXDatePicker fx:id="datePicker" promptText="Date">
+         <VBox.margin>
+            <Insets left="38.0" />
+         </VBox.margin>
+      </JFXDatePicker>
+      <JFXButton buttonType="RAISED" onAction="#onVehicleExitsButton" prefHeight="42.0" prefWidth="100.0" ripplerFill="#b57b39" style="-fx-background-color: #f7f4ea;" text="Enter" />
+   </children>
+</VBox>

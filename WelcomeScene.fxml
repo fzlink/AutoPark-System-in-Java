@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTreeTableView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1209.0" style="-fx-background-color: #f4c816;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Otopark.Controller">
+   <top>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="75.0" BorderPane.alignment="CENTER">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="98.0" stroke="BLACK" strokeType="INSIDE" width="360.0" />
+            <Label text="Autopark System">
+               <font>
+                  <Font name="Apple Garamond" size="30.0" />
+               </font>
+            </Label>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" height="98.0" layoutX="161.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="345.0" />
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="69.0" prefWidth="799.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="69.0" prefWidth="1074.0" spacing="20.0">
+                     <children>
+                        <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Logos/money.png" />
+                           </image>
+                        </ImageView>
+                        <JFXTextField fx:id="hourlyFeeTextField" promptText="Hourly Fee" />
+                        <JFXButton buttonType="RAISED" onAction="#updateHourlyFee" style="-fx-background-color: #f7f4ea;" text="Update Hourly Fee" />
+                        <Separator opacity="0.7" orientation="VERTICAL" prefHeight="200.0" />
+                        <JFXTextField fx:id="capacityTextField" layoutX="270.0" layoutY="29.0" promptText="Capacity" />
+                        <JFXButton buttonType="RAISED" layoutX="354.0" layoutY="29.0" onAction="#updateCapacity" style="-fx-background-color: #f7f4ea;" text="Update Capacity" />
+                        <ImageView fitHeight="43.0" fitWidth="52.0" layoutX="156.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Logos/traffic.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <Label fx:id="updateMessage" />
+               </children>
+            </VBox>
+         </children></HBox>
+   </bottom>
+   <left>
+      <VBox alignment="CENTER" prefHeight="519.0" prefWidth="132.0" spacing="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="96.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Logos/calendar.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="todayMessage" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="75.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Logos/piggy-bank.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="currentIncomeMessage" />
+               </children>
+            </VBox>
+         </children></VBox>
+   </left>
+   <right>
+      <VBox alignment="CENTER" prefHeight="591.0" prefWidth="240.0" spacing="50.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox spacing="10.0">
+               <children>
+                  <JFXButton buttonType="RAISED" onAction="#onVehicleEnters" prefHeight="77.0" prefWidth="139.0" style="-fx-background-color: #f7f4ea; -fx-background-radius: 40;" text="Vehicle Enter " />
+                  <ImageView fitHeight="75.0" fitWidth="89.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Logos/pizza%20(1).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <JFXButton buttonType="RAISED" onAction="#onVehicleExits" prefHeight="77.0" prefWidth="136.0" style="-fx-background-color: #f7f4ea; -fx-background-radius: 40;" text="Vehicle Exit" />
+                  <ImageView fitHeight="74.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Logos/pizza%20reverse.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox spacing="10.0">
+               <children>
+                  <JFXButton buttonType="RAISED" onAction="#openAddSubscription" prefHeight="77.0" prefWidth="134.0" style="-fx-background-color: #f7f4ea; -fx-background-radius: 40;" text="Add Subscription" />
+                  <ImageView fitHeight="79.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Logos/membership.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </VBox>
+   </right>
+   <center>
+      <JFXTreeTableView fx:id="parkRecordsTable" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
