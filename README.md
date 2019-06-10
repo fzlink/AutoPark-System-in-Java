@@ -1,7 +1,7 @@
 # AutoPark-System-in-Java
 This is a simple AutoPark System which solves your car trouble like a breeze.
 
-**Main Classes: 
+****************Main Classes: 
 
 -AutoPark
 
@@ -24,7 +24,7 @@ This is a simple AutoPark System which solves your car trouble like a breeze.
 -Vehicle
 
 
-**JUnit 4 Test Classes:
+****************JUnit 4 Test Classes:
 
 -TestCase1
 
@@ -33,7 +33,7 @@ This is a simple AutoPark System which solves your car trouble like a breeze.
 -AllTests
 
 
-**JavaFX Controller Classes:
+*****************JavaFX Controller Classes:
 
 
 -AddSubscriptionController
@@ -43,7 +43,7 @@ This is a simple AutoPark System which solves your car trouble like a breeze.
 -VehicleEnterExitController
 
 
-**FXML Files:
+*****************FXML Files:
 
 -AddSubscriptionScene
 
@@ -56,7 +56,7 @@ This is a simple AutoPark System which solves your car trouble like a breeze.
 -WelcomeScene
 
 
-**Exception Classes:
+******************Exception Classes:
 
 -AlreadyParkedException
 
